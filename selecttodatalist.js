@@ -13,7 +13,7 @@ function select_tolist(){
 	var position = $(v).position(),swidth=$(v).css("width");
 	var objpos={ "position":"absolute","top":position.top+22,"left":position.left};
 	$(v).css(objpos).hide().attr('size',20).attr("data-i",i).addClass("select_hide").prepend("<optgroup></optgroup>");
-	$('<input type="text" style="width:'+swidth+'" class="selecttolist"  data-i='+i+'   value="'+$(v).find("option:selected").text()+'"/>').insertBefore(v);
+	$('<input type="text" style="width:'+swidth+'" class="selecttolist"  data-i='+i+'   value="'+$(v).find("option:selected").text()+'"/><lable style="margin-left: -15px;">&nabla;</lable>').insertBefore(v);
 });
  //监听 input 文本变化
 	$(".selecttolist").bind("keyup", function(e){
